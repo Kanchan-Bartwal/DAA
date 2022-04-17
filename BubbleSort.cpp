@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void bubbleSort(int arr[])
+void bubbleSort(int arr[], int n)
 {
   int comp = 0, swap = 0;
 	
@@ -31,8 +31,9 @@ void bubbleSort(int arr[])
 	cout<<"Comparision : "<<comp<<endl;
 	cout<<"Swapping : "<<swap<<endl;
 }
-int main(){
-	
+
+int main()
+{
 	int n;
 	cout<<"Enter size: ";
 	cin>>n;
@@ -40,8 +41,9 @@ int main(){
 	int arr[n];
 	
 	cout<<"Enter array: ";
-	for(int i=0; i<n; i++){
+	for(int i=0; i<n; i++)
+	{
 		cin>>arr[i];
 	}
-	
+	bubbleSort(arr,n);
 }
