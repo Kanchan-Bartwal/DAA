@@ -1,4 +1,3 @@
-// Also called Linear Search
 #include<iostream>
 using namespace std;
 
