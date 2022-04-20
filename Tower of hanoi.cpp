@@ -3,6 +3,8 @@ using namespace std;
 
 void toh(int n, char A, char B, char C)
 {
+    if(n<1)
+        return;
     if(n==1)
     {
        cout<<"Move "<<A<<" to "<<C<<endl;
