@@ -1,6 +1,26 @@
 #include<iostream>
 using namespace std;
 
+void binarySearchRecursive(int arr[], int n, int data, int l, int h)
+{
+    if(l>h)
+    {
+        cout<<"Element not found"<<endl;
+        return;
+    }
+    
+    int mid=(l+h)/2;
+    if(arr[mid]==data)
+    {
+        cout<<"Element is present"<<endl;
+        return;
+    }
+    else if(arr[mid]>data)
+        binarySearchRecursive(arr,n,data,l,mid-1);
+    else
+        binarySearchRecursive(arr,n,data,mid+1,h);
+}
+
 void binarySearchIterative(int arr[], int n, int data)
 {
     int l=0;
@@ -41,5 +61,6 @@ int main()
     cin>>data;
     
     binarySearchIterative(arr, n, data);
+    binarySearchRecursive(arr,n,data,0,n-1);
     return 0;
 }
