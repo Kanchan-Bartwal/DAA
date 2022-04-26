@@ -33,7 +33,7 @@ void countSort(int a[], int n) // function to perform counting sort
   
    for (int i = n - 1; i >= 0; i--) 
    {  
-    output[count[--a[i]]] = a[i];  
+    output[--count[a[i]]] = a[i];  
   }  
   
    for(int i = 0; i<n; i++) {  
